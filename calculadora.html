@@ -1,0 +1,51 @@
+<html> <!---Rodrigo Valero Avila--> 
+<head>
+    <head>
+        <title>Calculadora</title>
+        <style>
+          body {
+            text-align:center;
+          }
+          
+          .results{
+            padding-left: 50%;
+    
+          }
+          
+        </style>
+        </head>
+      <body>
+            <div style ="background:#04c0c0;">
+            <font color ="white" size="5px"> 
+                <h2> CALCULADORA </h2>
+            </font>
+            </div>
+            <div style ="background:#6d0cdb;">
+            
+
+ <form name="calc"> 
+<p>Numero 1: <input type="Text" name="operador1" value="" size="12"> 
+<br>
+<p>Numero 2: <input type="Text" name="operador2" value="" size="12">
+<br>
+<br>
+<input type="Button" name="" value=" Suma + " onclick="calcula('+')">
+<input type="Button" name="" value=" Resta - " onclick="calcula('-')">
+<input type="Button" name="" value=" Multiplicacion X " onclick="calcula('*')"> 
+<input type="Button" name="" value=" Divicion / " onclick="calcula('/')">
+<br>
+<p>Resultado: <input type="Text" name="resultado" value="" size="12">
+
+</form>
+</body>
+
+<script>
+  function calcula(operacion){
+    var operador1 = document.calc.operador1.value 
+    var operador2 = document.calc.operador2.value
+    var result = eval(operador1 + operacion + operador2)
+    document.calc.resultado.value = result
+}
+</script>
+</body>
+</html>
